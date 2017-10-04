@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {mainRouterModule} from './app.route'
 
 import { AppComponent } from './app.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
@@ -10,7 +11,8 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
     AdminPageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    mainRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
