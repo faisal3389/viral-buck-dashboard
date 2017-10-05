@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {AdminService} from './../admin.service'
 @Component({
   selector: 'app-admin-page',
   templateUrl: './admin-page.component.html',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminPageComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(
+    private adminService : AdminService
+  ) { }
+  
+  url :String;
+  responseadminpost:Object;
   ngOnInit() {
   }
-
+  postTask(){
+    this.adminService.PostTask(this.url)
+    .subscribe(res=>{
+      this.responseadminpost=res;
+    })
+  }
 }
