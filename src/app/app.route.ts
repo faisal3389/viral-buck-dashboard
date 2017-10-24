@@ -1,10 +1,21 @@
 import { RouterModule, Routes } from '@angular/router';
-import { AdminPageComponent} from './admin-page/admin-page.component'
+import { AdminPageComponent} from './admin-page/admin-page.component';
+import { DashboardComponent} from './dashboard/dashboard.component';
+import { SignupComponent} from './signup/signup.component';
+import { LoginComponent} from './login/login.component';
+import { ForgotComponent} from './forgot/forgot.component';
+import { ResetComponent} from './reset/reset.component';
+
+
 import { NgModule }      from '@angular/core';
 
 export const mainRouter: Routes = [
-    { path: 'short', component: AdminPageComponent },
-    
+    { path: 'admin', component: AdminPageComponent },
+    { path: 'signup', component: SignupComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'forgot', component: ForgotComponent },
+    { path: 'reset', component: ResetComponent },
+    { path: 'dashboard', component: DashboardComponent },
   ];
   
   @NgModule({

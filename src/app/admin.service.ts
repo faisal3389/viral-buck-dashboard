@@ -12,20 +12,33 @@ import {
 @Injectable()
 export class AdminService {
     constructor( private http:Http){}
+    
     BASE_URL = baseUrl;
     private handleError(error:any){
         return Observable.throw(error.json().error||'Server error');
     }
-    PostTask(url: String){
-        // let url =  this.nodeurl+'/products/new';
-        let ipurl = this.BASE_URL+'/posturl';
-        let body = JSON.stringify( url );
-        let headers = new Headers({ 'Content-Type': 'application/json' });
+    PostTask(url : String){
+        let ipurl = this.BASE_URL+'short';
+        
+        let body  = JSON.stringify(url);
+        let headers = new Headers({ 'Content-type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
-        return this.http.post(ipurl,body, options)
-            .map((res:Response) => res.json()) 
-            .catch(this.handleError); 
+    
+        return this.http.post(ipurl, body,options)
+          .map((res:Response) => res.json())
+          .catch(this.handleError);
       }
+    // PostTask(url: String){
+    //     // let url =  this.nodeurl+'/products/new';
+    //     let ipurl = this.BASE_URL+'short';
+    //     let body = JSON.stringify( url );
+    //     console.log(body,ipurl)
+    //     let headers = new Headers({ 'Content-Type': 'application/json' });
+    //     let options = new RequestOptions({ headers: headers });
+    //     return this.http.post(ipurl,body,options)
+    //         .map((res:Response) => res.json()) 
+    //         .catch(this.handleError); 
+    //   }
 }
 
 // PostTask (url:string){
