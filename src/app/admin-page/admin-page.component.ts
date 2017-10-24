@@ -15,10 +15,12 @@ export class AdminPageComponent implements OnInit {
   responseadminpost:Object;
   ngOnInit() {
   }
-  postTask(){
+  generateLink(){
     this.adminService.PostTask(this.url)
     .subscribe(res=>{
       this.responseadminpost=res;
     })
+    console.log("Inside generate Link")
+    
   }
 }
