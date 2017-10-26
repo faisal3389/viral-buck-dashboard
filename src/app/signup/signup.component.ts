@@ -1,18 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+// import { NotificationService } from '../models/notification.service';
 
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  styleUrls: ['./signup.component.css'],
+  providers: [AuthService],
+  
 })
 export class SignupComponent implements OnInit {
 
   constructor(private authenticationService : AuthService,
     private router : Router,
-    private route: ActivatedRoute) { }
+    // private _notification: NotificationService,
+    private route: ActivatedRoute){ }
 
   ngOnInit() {
   }
@@ -48,12 +52,17 @@ signUp(){
     alert("Please fill required fields");
     return;
 }
+else{
   this.authenticationService.signUp(this.email,this.phone,this.password,this.confirmpassword,this.referral).subscribe(res =>{
+    console.log("response",res)
     
-    if(res){
+    if(res.status=='success'){
       console.log("signup  succesfull");
-              this.router.navigate(['/login']);
+      alert("user regisration successfull")
+      // this._notification.notify("User registration successful");
+      this.router.navigate(['/login']);
     }
-  }) 
+  })
+} 
 }
 }
