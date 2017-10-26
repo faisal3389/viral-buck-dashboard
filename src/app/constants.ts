@@ -1,3 +1,3 @@
 
-export const baseUrl : String="http://192.168.0.109:3000/";
+export const baseUrl : String="http://192.168.0.105:3000/";
 
