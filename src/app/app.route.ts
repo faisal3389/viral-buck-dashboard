@@ -10,8 +10,9 @@ import { ResetComponent} from './reset/reset.component';
 import { NgModule }      from '@angular/core';
 
 export const mainRouter: Routes = [
-    { path: 'admin', component: AdminPageComponent },
+    { path: '', component: SignupComponent },
     { path: 'signup', component: SignupComponent },
+    { path: 'admin', component: AdminPageComponent },
     { path: 'login', component: LoginComponent },
     { path: 'forgot', component: ForgotComponent },
     { path: 'reset', component: ResetComponent },
