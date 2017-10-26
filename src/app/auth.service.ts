@@ -1,13 +1,8 @@
 import { Injectable } from '@angular/core';
 import {baseUrl} from './constants';
-import {Observable} from 'rxjs/Rx';
-import {
-    Jsonp,
-    Http,
-    Response,
-    Headers,
-    RequestOptions
-} from '@angular/http';
+import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs/Rx';
+import { Jsonp, Http, Response, Headers, RequestOptions } from '@angular/http';
 
 @Injectable()
 export class AuthService {
@@ -26,7 +21,7 @@ export class AuthService {
         "confirmpassword":confirmpassword,
         "referral":referral
     }
-          let dataString = "email="+email+"&"+"phone="+phone+"&"+"password="+password+"&"+"confirmpassword="+confirmpassword+"&"+"referral="+referral;
+    let dataString = "email="+email+"&"+"phone="+phone+"&"+"password="+password+"&"+"confirmpassword="+confirmpassword+"&"+"referral="+referral;
     let url = this.BASE_URL+'signup';
     // let bodyString = JSON.stringify(body); 
     let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' }); 
