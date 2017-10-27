@@ -59,13 +59,14 @@
                                       <th>Share</th>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                          <td>url <i class="fa fa-clone" id="copy" aria-hidden="true"></i></td>
-                                          <td>url</td>
-                                          <td>
-                                            <span class="socialShare"></span>
-                                          </td>
+                                        <tr *ngFor="let response of resp">
+                                                        <th>
+                                                            <a href="{{response.short_url}}">{{response.short_url}} </a>
+                                                        </th>
+                                                        <th>{{response.clicks}}
+                                                            </th>
                                         </tr>
+                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -76,6 +77,10 @@
         </div>
     </div>
 </div>
+
+
+
+
 <!-- <script>
   var url = 'https://tutorialzine.com/2014/08/cool-share-jquery-plugin/';
 var options = {
