@@ -1,10 +1,16 @@
 <div class="body">
-  <div class="logo"></div>
-  <div class="login-block">
-      <h1>Reset Password</h1>
+    <div class="container-fluid" style="background-color:#003b49;height: 637px;">
+        <div class="container">
+    <img src="/assets/img/viral buck.png" width="250" height="70" />
+</div>
+
+  <div class="login-block" style="font-family: open sans;margin-top: 5%;border-top:10px solid #44bda9;">
+      <h2>Reset Password</h2>
+      <h3>Enter your mobile number to reset your password</h3>
       <input type="text" value="" [(ngModel)]="email" placeholder="Email or Mobile" id="username" />
       <input type="text" value=""[(ngModel)]="otp"placeholder="OTP" id="username" />
       <input type="password" value=""[(ngModel)]="newpassword" placeholder="New Password" id="password" />
-      <button type="submit" (click)="reset()">Submit</button>
+      <button type="submit" (click)="reset()" style="background-color:#44bda9;border:0;">Submit</button>
+  </div>
   </div>
   </div>
