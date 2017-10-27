@@ -12,14 +12,32 @@ export class AdminService {
     private handleError(error:any){
         return Observable.throw(error.json().error||'Server error');
     }
+    _getRequestOptionsWithBearer(){
+        let token=localStorage.getItem("token");
+        let headers = new Headers({
+                'Accept': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded',
+        }); 
+    
+    
+        if(!(token == undefined || token == null || token == "")){
+            headers = new Headers({
+                'Accept': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Authorization': 'Bearer ' +token
+            });
+        }
+        return new RequestOptions({ headers: headers });
+    }
+
     PostTask(url : String,assigned_to:String){
-        let ipurl = this.BASE_URL+'admin/'+'task';
+        let ipurl = this.BASE_URL+'admin';
         
         let body  = JSON.stringify(url);
         let dataString = "url="+body+"&"+"assigned_to="+assigned_to;
         
         let headers = new Headers({ 'Content-type': 'application/json' });
-        let options = new RequestOptions({ headers: headers });
+        let options = this._getRequestOptionsWithBearer();
     
         return this.http.post(ipurl, dataString,options)
           .map((res:Response) => res.json())
