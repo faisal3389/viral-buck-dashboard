@@ -9,6 +9,7 @@ import {DashboardService} from '../dashboard.service'
 })
 export class DashboardComponent implements OnInit {
 
+  resp:any;
   constructor(
     private DashboardService : DashboardService,
   ) { }
@@ -21,7 +22,7 @@ export class DashboardComponent implements OnInit {
   let email = localStorage.getItem('email');
   this.DashboardService.dashboard(email).subscribe(res =>{
     console.log(res)
-  
+  this.resp=res
   })
   }
 }
