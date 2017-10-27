@@ -8,7 +8,7 @@ import {AdminService} from './../admin.service'
 export class AdminPageComponent implements OnInit {
 
   constructor(
-    private adminService : AdminService
+    private AdminService : AdminService
   ) { }
   
   url :any;
@@ -17,9 +17,10 @@ export class AdminPageComponent implements OnInit {
   ngOnInit() {
   }
   generateLink(){
-    this.adminService.PostTask(this.url,this.assigned_to)
+    this.AdminService.PostTask(this.url,this.assigned_to)
     .subscribe(res=>{
       this.responseadminpost=res;
+      console.log(res)
     })
     console.log("Inside generate Link")
     
