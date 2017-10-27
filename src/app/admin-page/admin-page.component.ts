@@ -20,7 +20,10 @@ export class AdminPageComponent implements OnInit {
     this.AdminService.PostTask(this.url,this.assigned_to)
     .subscribe(res=>{
       this.responseadminpost=res;
+      if (res.status=='success'){
       console.log(res)
+      alert("Task Posted Successfully")
+      }
     })
     console.log("Inside generate Link")
     
