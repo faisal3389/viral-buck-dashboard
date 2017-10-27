@@ -1,9 +1,15 @@
 <div class="body">
-  <div class="logo"></div>
-  <div class="login-block">
-      <h1>Login</h1>
+    <div class="container-fluid" style="background-color:#003b49;height: 637px;">
+        <div class="container">
+    <img src="/assets/img/viral buck.png" width="250" height="70" />
+</div>
+ 
+  <div class="login-block" style="font-family: open sans;margin-top: 5%;border-top:10px solid #44bda9;">
+      <h2>Login to Viral Buck</h2>
+      <h3>Enter your details to login</h3>
       <input type="text" value="" [(ngModel)]="email" placeholder="Email or Mobile" id="username" />
       <input type="password" value="" [(ngModel)]="password" placeholder="Password" id="password" />
-      <button type="submit" (click)="login()">Submit</button>
+      <button type="submit" (click)="login()" style="background-color:#44bda9;border:0;">Submit</button>
+  </div>
   </div>
   </div>
