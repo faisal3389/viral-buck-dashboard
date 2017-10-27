@@ -23,6 +23,8 @@ export class LoginComponent implements OnInit {
         console.log("login  succesfull");
         let token = res.token;
         let email = res.user.user.email
+        let role = res.user.user.role
+        localStorage.setItem("role",role)
         localStorage.setItem("email",email);
         localStorage.setItem("token",token);
         
