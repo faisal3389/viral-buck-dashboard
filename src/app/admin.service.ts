@@ -33,7 +33,7 @@ export class AdminService {
     PostTask(url : String,assigned_to:String){
         let ipurl = this.BASE_URL+'admin';
         
-        let body  = JSON.stringify(url);
+        let body  = url;
         let dataString = "url="+body+"&"+"assigned_to="+assigned_to;
         
         let headers = new Headers({ 'Content-type': 'application/json' });
