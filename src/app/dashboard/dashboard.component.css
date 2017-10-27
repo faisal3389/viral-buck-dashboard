@@ -30,7 +30,12 @@
     background: #007bb5;
     color: white;
   }
-  
+  .sidebar .logo:after, .off-canvas-sidebar .logo:after {
+    height: 0; 
+  }
+  th {
+    color: #003b49;
+  }
 
  
   
