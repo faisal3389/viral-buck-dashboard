@@ -98,4 +98,12 @@
       width: 700px;
     }
   } */
- 
+
+
+  .login-block h2 {
+    font-family: open sans;
+    font-size: 25px;
+    margin-top: 0;
+    font-weight: 400;
+    color: #44bda9;
+}
