@@ -11,12 +11,13 @@ export class AdminPageComponent implements OnInit {
     private adminService : AdminService
   ) { }
   
-  url :String;
+  url :any;
+  assigned_to:any;
   responseadminpost:Object;
   ngOnInit() {
   }
   generateLink(){
-    this.adminService.PostTask(this.url)
+    this.adminService.PostTask(this.url,this.assigned_to)
     .subscribe(res=>{
       this.responseadminpost=res;
     })
