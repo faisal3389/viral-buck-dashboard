@@ -39,30 +39,15 @@
       </div>
     </div>
   </div> -->
-<div class="fs-ContentBar">
- <div class="container">
-     <div class="row fs-Content"> 
-         <div class="col-sm-12 col-md-12 col-lg-12"> 
-             <div class="fs-wrap">
-                 <div class="fs-c-wrap">
-                     <div class="fs-max-bar">
-                         <div class="fs-i-card"> 
-                             <div> <img class="text-center" src="" width="50" height="50"></div>
-                             <h3 class="hello omb_authTitle text-center"></h3> 
-                             <div class="row omb_row-sm-offset-3">
-                               <div class="col-xs-12 col-sm-6 col-sm-offset-3">  
-                                 <form class="omb_loginForm" > 
-                                    <input type="text" class="form-control" required [(ngModel)]="url" name="url" #name="ngModel" placeholder="URL"> <br>
-                                    <input type="text" class="form-control" required [(ngModel)]="email" name="email" #name="ngModel" placeholder="Assigned To"> <br>
-                                    <button class="btn btn-lg btn-primary btn-block fs-margintop10" (click)="generateLink()" type="submit">Post</button>
-                                 </form>
-                               </div>
-                             </div> 
-                         </div> 
-                     </div> 
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
+  <div class="container-fluid" style="background-color:#003b49;height: 637px;">
+      <div class="container">
+  <img src="/assets/img/viral buck.png" width="250" height="70" />
+</div>
+
+<div class="login-block" style="font-family: open sans;margin-top: 8%;border-top:10px solid #44bda9;width: 45%;">
+    <h2>Create a Task</h2>
+    <input type="text" class="form-control" required [(ngModel)]="url" name="url" #name="ngModel" placeholder="URL">
+    <input type="text" class="form-control" required [(ngModel)]="email" name="email" #name="ngModel" placeholder="Assigned To">
+    <button style="background-color:#44bda9;border:0;font-size: 18px;font-family: open sans;line-height: 8px;" class="btn btn-lg btn-primary btn-block fs-margintop10" (click)="generateLink()" type="submit">Post</button>
+</div>
 </div>
