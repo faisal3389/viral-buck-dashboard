@@ -19,12 +19,22 @@ export class LoginComponent implements OnInit {
   password:any;
   login(){
     this.authenticationService.login(this.email,this.password).subscribe(res =>{
-      if(res){
+      if(res.status=="success" && res.user.user.role=="user"){
         console.log("login  succesfull");
         let token = res.token;
+        let email = res.user.user.email
+        localStorage.setItem("email",email);
         localStorage.setItem("token",token);
+        
         this.router.navigate(['/dashboard']);
         
+      }
+      else if(res.status=="success" && res.user.user.role=="admin"){
+        let token = res.token;
+        let email = res.user.user.email
+        localStorage.setItem("email",email);
+        this.router.navigate(['/admin']);
+
       }    
     })
   }
