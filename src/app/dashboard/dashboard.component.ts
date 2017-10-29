@@ -1,22 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import {DashboardService} from '../dashboard.service'
+import { ActivatedRoute,Router } from '@angular/router';
+import {AuthService} from '../auth.service'
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
-  providers: [DashboardService]
+  providers: [DashboardService,AuthService]
 })
 export class DashboardComponent implements OnInit {
 
   resp:any;
   constructor(
     private DashboardService : DashboardService,
+    private router : Router,
+    private AuthService : AuthService,
   ) { }
 
   ngOnInit() {
     this.dashboard()
   }
+
 
   dashboard(){
   let email = localStorage.getItem('email');
@@ -24,5 +29,11 @@ export class DashboardComponent implements OnInit {
     console.log(res)
   this.resp=res
   })
+  }
+
+  logout(){
+    console.log("Inside")
+    this.AuthService.logout();
+    this.router.navigate(['/login']);
   }
 }
