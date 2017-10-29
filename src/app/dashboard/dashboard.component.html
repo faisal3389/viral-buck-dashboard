@@ -33,7 +33,15 @@
           <ul class="nav navbar-nav navbar-right">
             <li>
               <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="material-icons">person</i>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: black;">
+                                        <i class="fa fa-user"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a (click)="logout()">Log Out</a></li>
+                                    </ul>
+                                </li>
+                       
                   <p class="hidden-lg hidden-md">Profile</p>
                 </a>
             </li>
@@ -63,9 +71,8 @@
                                                         <th>
                                                             <a href="{{response.short_url}}">{{response.short_url}} </a>
                                                         </th>
-                                                        <th>{{response.clicks}}
-                                                            </th>
-                                                            <!-- <th><span class="socialShare"></span></th> -->
+                                                            <th>{{response.clicks}}</th>
+                                                            <th class="socialShare"></th>
                                         </tr>
                                         
                                     </tbody>
@@ -82,8 +89,3 @@
 
 
 
-<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
-<link href="/assets/cool-share/plugin.css" media="all" rel="stylesheet" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- Near the closing body tag -->
-<script src="/assets/cool-share/plugin.js"></script>
