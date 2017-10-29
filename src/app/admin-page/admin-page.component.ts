@@ -24,6 +24,9 @@ export class AdminPageComponent implements OnInit {
       console.log(res)
       alert("Task Posted Successfully")
       }
+      else if(res.status=='failed'){
+        alert(res.message)
+      }
     })
     console.log("Inside generate Link")
     
