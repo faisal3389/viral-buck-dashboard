@@ -71,4 +71,13 @@ export class AuthService {
           .map((res:Response) => res.json())
           .catch((error:any) => Observable.throw(error.json() || 'Server error getting brands'))
     }
+    setIsLoggedIn(bool){
+        localStorage.setItem("isLoggedIn",bool);    
+      }
+    logout(){
+        console.log("Inside auth service")
+        localStorage.removeItem("token",);
+        localStorage.removeItem("email",);
+            this.setIsLoggedIn(false);
+    }
     }
