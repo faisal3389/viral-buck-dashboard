@@ -62,6 +62,9 @@ else{
       // this._notification.notify("User registration successful");
       this.router.navigate(['/login']);
     }
+    else if (res.status=='failed'){
+      alert(res.message)
+    }
   })
 } 
 }
