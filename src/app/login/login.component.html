@@ -10,6 +10,8 @@
       <input type="text" value="" [(ngModel)]="email" placeholder="Email or Mobile" id="username" />
       <input type="password" value="" [(ngModel)]="password" placeholder="Password" id="password" />
       <button type="submit" (click)="login()" style="background-color:#44bda9;border:0;">Submit</button>
-  </div>
+      <p style="position: relative;top:20px;left:5px"> Dont have an Account?<a  id="a" [routerLink]="['/signup']">SignUp!</a>
+        <a id="anchor" [routerLink]="['/forgot']">Forgot?</a>
+    </div>
   </div>
   </div>

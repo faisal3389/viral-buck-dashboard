@@ -13,6 +13,9 @@ $(function (){
 		googlePlus : true
 	};
 
+	var value = $('.socialShare')[1]
+	// console.log("value",value)
+
 	$('.socialShare').shareButtons(url, options);
 
 

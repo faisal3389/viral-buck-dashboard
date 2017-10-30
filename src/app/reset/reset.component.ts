@@ -22,7 +22,8 @@ export class ResetComponent implements OnInit {
     this.authenticationService.resetPassword(this.email,this.otp,this.newpassword ).subscribe(res =>{
       if(res){
       console.log("Password Reset successfully")
-                  this.router.navigate(['/login']);
+      alert("Reset Password Successfully");
+      this.router.navigate(['/login']);
         }
     })
   }

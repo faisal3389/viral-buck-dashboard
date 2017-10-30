@@ -6,6 +6,8 @@ import { Jsonp, Http, Response, Headers, RequestOptions } from '@angular/http';
 
 @Injectable()
 export class AuthService {
+    private isLoggedIn: boolean;
+    
     constructor( private http:Http){}
     
     BASE_URL = baseUrl;
@@ -78,6 +80,10 @@ export class AuthService {
         console.log("Inside auth service")
         localStorage.removeItem("token",);
         localStorage.removeItem("email",);
+        localStorage.removeItem("role",);
             this.setIsLoggedIn(false);
     }
+    getIsLoggedIn(){
+        return localStorage.getItem("isLoggedIn") === "true"? true:false;
+      }
     }

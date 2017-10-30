@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {AdminService} from './../admin.service'
+import {AdminService} from './../admin.service';
+import { ActivatedRoute,Router } from '@angular/router';
+import {AuthService} from '../auth.service'
+
+
 @Component({
   selector: 'app-admin-page',
   templateUrl: './admin-page.component.html',
@@ -8,13 +12,20 @@ import {AdminService} from './../admin.service'
 export class AdminPageComponent implements OnInit {
 
   constructor(
-    private AdminService : AdminService
+    private AdminService : AdminService,
+    private router : Router,
+    private AuthService : AuthService,
+    
   ) { }
   
   url :any;
   assigned_to:any;
   responseadminpost:Object;
   ngOnInit() {
+    if(!this.AuthService.getIsLoggedIn()){
+      this.router.navigate(['/login']);
+      return;
+    }
   }
   generateLink(){
     this.AdminService.PostTask(this.url,this.assigned_to)
@@ -30,5 +41,11 @@ export class AdminPageComponent implements OnInit {
     })
     console.log("Inside generate Link")
     
+  }
+  
+  logout(){
+    console.log("logout successfully")
+    this.AuthService.logout();
+    this.router.navigate(['/login']);
   }
 }

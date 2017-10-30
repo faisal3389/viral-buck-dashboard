@@ -19,6 +19,10 @@ export class DashboardComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    if(!this.AuthService.getIsLoggedIn()){
+      this.router.navigate(['/login']);
+      return;
+    }
     this.dashboard()
   }
 
@@ -32,7 +36,7 @@ export class DashboardComponent implements OnInit {
   }
 
   logout(){
-    console.log("Inside")
+    console.log("logout successfully")
     this.AuthService.logout();
     this.router.navigate(['/login']);
   }

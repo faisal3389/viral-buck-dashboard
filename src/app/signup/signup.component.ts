@@ -56,7 +56,7 @@ else{
   this.authenticationService.signUp(this.email,this.phone,this.password,this.confirmpassword,this.referral).subscribe(res =>{
     console.log("response",res)
     
-    if(res.status=='success'){
+    if(this.ValidateEmail() && res.status=='success'){
       console.log("signup  succesfull");
       alert("user regisration successfull")
       // this._notification.notify("User registration successful");

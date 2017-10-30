@@ -5,6 +5,8 @@ import {AdminService} from './admin.service'
 import {AuthService} from './auth.service'
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
+import { ClipboardModule } from 'ngx-clipboard';
+
 
 import { AppComponent } from './app.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
@@ -28,7 +30,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserModule,
     mainRouterModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    ClipboardModule
     
   ],
   providers: [AdminService,AuthService],

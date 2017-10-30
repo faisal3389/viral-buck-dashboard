@@ -20,6 +20,7 @@ export class ForgotComponent implements OnInit {
     this.authenticationService.forgotPassword(this.email).subscribe(res =>{
       if(res){
       console.log("Email sent successfully")
+      alert("Please check your Email to Reset Password");
                 this.router.navigate(['/reset']);
       }
     })

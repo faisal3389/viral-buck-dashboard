@@ -5,12 +5,14 @@ import { SignupComponent} from './signup/signup.component';
 import { LoginComponent} from './login/login.component';
 import { ForgotComponent} from './forgot/forgot.component';
 import { ResetComponent} from './reset/reset.component';
+import { AuthGuard } from './guards/auth.guard';
+
 
 
 import { NgModule }      from '@angular/core';
 
 export const mainRouter: Routes = [
-    { path: '', component: SignupComponent },
+    { path: '', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
     { path: 'admin', component: AdminPageComponent },
     { path: 'login', component: LoginComponent },
