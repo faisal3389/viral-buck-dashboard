@@ -10,6 +10,7 @@
     <h2>Create a Task</h2>
     <input type="text" class="form-control" required [(ngModel)]="url" name="url" #name="ngModel" placeholder="URL">
     <input type="text" class="form-control" required [(ngModel)]="assigned_to" name="email" #name="ngModel" placeholder="Assigned To">
+    <!-- <input  type="number" name="quantity" min="1" max="5" class="form-control" required [(ngModel)]="bidValue" #name="ngModel" placeholder="Bid Value"> -->
     <button style="background-color:#44bda9;border:0;font-size: 18px;font-family: open sans;line-height: 8px;" class="btn btn-lg btn-primary btn-block fs-margintop10" (click)="generateLink()" type="submit">Post</button>
 </div>
 </div>
