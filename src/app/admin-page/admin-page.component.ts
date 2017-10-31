@@ -28,6 +28,7 @@ export class AdminPageComponent implements OnInit {
     }
   }
   generateLink(){
+    if (localStorage.getItem('role')=='admin'){
     this.AdminService.PostTask(this.url,this.assigned_to)
     .subscribe(res=>{
       this.responseadminpost=res;
@@ -40,7 +41,10 @@ export class AdminPageComponent implements OnInit {
       }
     })
     console.log("Inside generate Link")
-    
+    }
+    else if (localStorage.getItem('role')=='user'){
+      alert("You are not an authorised admin please Switch to dashboard page")
+    }
   }
   
   logout(){
