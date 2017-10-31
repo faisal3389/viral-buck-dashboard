@@ -39,9 +39,10 @@ export class LoginComponent implements OnInit {
       }
       else if(res.status=="success" && res.user.user.role=="admin"){
         this.authenticationService.setIsLoggedIn(true);
-        let role = res.user.user.role
-        localStorage.setItem("role",role)
+        let role = res.user.user.role;
         let token = res.token;
+        localStorage.setItem("role",role)
+        localStorage.setItem("token",token);
         let email = res.user.user.email
         localStorage.setItem("email",email);
         this.router.navigate(['/admin']);
