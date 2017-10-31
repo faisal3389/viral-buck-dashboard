@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/admin']);
 
       }  
-      else if(res.status=='failed' || res.status=='Unauthorised' ){
+      else if(res.status=='failed' || res.status=='Unauthorized' || res.status == 'Unauthorised' ){
         alert(res.message)
       }  
     })
