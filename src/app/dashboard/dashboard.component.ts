@@ -30,6 +30,10 @@ export class DashboardComponent implements OnInit {
   dashboard(){
   let email = localStorage.getItem('email');
   this.DashboardService.dashboard(email).subscribe(res =>{
+    for (var i=0;i<res.length;i++){
+    res[i].totalAmount = (res[i].bidValue*res[i].clicks)/100
+    console.log(res)
+    }
     console.log(res)
   this.resp=res
   })

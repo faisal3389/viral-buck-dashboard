@@ -30,11 +30,10 @@ export class AdminService {
         return new RequestOptions({ headers: headers });
     }
 
-    PostTask(url : String,assigned_to:String){
+    PostTask(url : String,assigned_to:String,bidValue:Number){
         let ipurl = this.BASE_URL+'admin';
         
-        let body  = url;
-        let dataString = "url="+body+"&"+"assigned_to="+assigned_to;
+        let dataString = "url="+url+"&"+"assigned_to="+assigned_to+"&"+"bidValue="+bidValue;
         
         let headers = new Headers({ 'Content-type': 'application/json' });
         let options = this._getRequestOptionsWithBearer();
