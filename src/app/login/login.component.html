@@ -1,17 +1,36 @@
-<div class="body">
-    <div class="container-fluid" style="background-color:#003b49;height: 637px;">
-        <div class="container">
+<div class="fs-ContentBar">
+ <div class="container">
     <img src="/assets/img/viral buck.png" width="250" height="70" />
+     <div class="row fs-Content"> 
+         <div class="col-sm-12 col-md-12 col-lg-12">  
+             <div class="fs-wrap">
+                 <div class="fs-c-wrap">
+                     <div class="fs-max-bar">
+                         <div class="fs-i-card"> 
+                             <div> <img class="text-center" src="" width="50" height="50"></div>
+                             <h3 class="hello omb_authTitle text-center">Login </h3> 
+                             <div class="row omb_row-sm-offset-3">
+                               <div class="col-xs-12 col-sm-6 col-sm-offset-3" >  
+                                 <form class="omb_loginForm" (ngSubmit)="login()" autocomplete="off" id="form"> 
+                                     <input type="text" class="form-control" required [(ngModel)]="email" name="email" #name="ngModel" placeholder="Email address"><br>
+                                     <input type="password" class="form-control" required [(ngModel)]="password" name="password" #name="ngModel" placeholder="Password"> 
+                                     <button class="btn btn-lg btn-primary btn-block fs-margintop10" type="submit">LOGIN</button>
+                                 </form>
+                               </div>
+                             </div> 
+                             <div class="row omb_login">
+                                 <div class="omb_row-sm-offset-3 omb_socialButtons col-sm-6 col-sm-offset-3" id="col-nw">
+                                    <div class="col-sm-12 col-xs-12 " id="new" >
+                                        <span>New to Viral Paisa?</span><span> <a [routerLink]="['/signup']" routerLinkActive="active" style="color:#D34836;font-size: 18px;">Create account!</a></span>
+                                        <span> <a [routerLink]="['/forgot']" routerLinkActive="active" style="color:#D34836;margin-left:5%;font-size: 18px;">Forgot?</a></span>
+                                    </div> 
+                                 </div> 
+                             </div>
+                         </div> 
+                     </div> 
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
 </div>
- 
-  <div class="login-block" style="font-family: open sans;margin-top: 5%;border-top:10px solid #44bda9;">
-      <h2>Login to Viral Buck</h2>
-      <h3>Enter your details to login</h3>
-      <input type="text" value="" [(ngModel)]="email" placeholder="Email or Mobile" id="username" />
-      <input type="password" value="" [(ngModel)]="password" placeholder="Password" id="password" />
-      <button type="submit" (click)="login()" style="background-color:#44bda9;border:0;">Submit</button>
-      <p style="position: relative;top:20px;left:5px"> Dont have an Account?<a  id="a" [routerLink]="['/signup']">SignUp!</a>
-        <a id="anchor" [routerLink]="['/forgot']">Forgot?</a>
-    </div>
-  </div>
-  </div>

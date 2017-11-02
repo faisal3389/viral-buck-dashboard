@@ -1,19 +1,31 @@
-<div class="body">
-    <div class="container-fluid" style="background-color:#003b49;height: 637px;">
+ <div class="fs-ContentBar">
         <div class="container">
-    <img src="/assets/img/viral buck.png" width="250" height="70" />
-</div>
-
-<div class="login-block" style="font-family: open sans;margin-top: 2%;border-top:10px solid #44bda9;">
-    <h2>Sign Up To Viral Buck</h2>
-    <h3>Create Account</h3>
-    <input type="text" value="" [(ngModel)]="email" placeholder="Email" id="username" />
-    <input type="text" value="" [(ngModel)]="phone" placeholder="Phone" id="username" />
-    <input type="password" value="" [(ngModel)]="password" placeholder="Password" id="password" />
-    <input type="password" value="" [(ngModel)]="confirmpassword" placeholder="Confirm Password" id="password" />
-    <input type="text" value="" [(ngModel)]="referral" placeholder="Referral" id="username" />
-    <button type="submit" (click)="signUp()" style="background-color:#44bda9;border:0;">Submit</button>
-</div>
-</div>
-</div>
-
+           <img src="/assets/img/viral buck.png" width="250" height="70" />
+            <div class="row fs-Content"> 
+                <div class="col-sm-12 col-md-12 col-lg-12">  
+                    <div class="fs-wrap">
+                        <div class="fs-c-wrap">
+                            <div class="fs-max-bar">
+                                <div class="fs-i-card"> 
+                                    <div> <img class="text-center" src="" width="50" height="50"></div>
+                                    <h3 class="hello omb_authTitle text-center">Sign Up </h3> 
+                                    <div class="row omb_row-sm-offset-3">
+                                      <div class="col-xs-12 col-sm-6 col-sm-offset-3" >  
+                                        <form class="omb_loginForm" (ngSubmit)="signUp()" autocomplete="off" id="form"> 
+                                            <input type="text" class="form-control" required [(ngModel)]="email" name="email" #name="ngModel" placeholder="Email address"><br>
+                                            <input type="text" class="form-control" required [(ngModel)]="phone" name="phone" #name="ngModel" placeholder="Phone Number"><br>
+                                            <input type="password" class="form-control" required [(ngModel)]="password" name="password" #name="ngModel" placeholder="Password"> <br>
+                                            <input type="password" class="form-control" required [(ngModel)]="confirmpassword" name="confirmpassword" #name="ngModel" placeholder="Confirm Password"><br>
+                                            <input type="text" class="form-control" required [(ngModel)]="referral" name="referral" #name="ngModel" placeholder="Referral"><br>
+                                            <button class="btn btn-lg btn-primary btn-block fs-margintop10" type="submit">SIGN UP</button>
+                                        </form>
+                                      </div>
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
