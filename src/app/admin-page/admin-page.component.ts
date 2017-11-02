@@ -21,6 +21,8 @@ export class AdminPageComponent implements OnInit {
   url :any;
   assigned_to:any;
   bidValue:any;
+  targetClicks:any;
+  Slug:any;
   responseadminpost:Object;
   ngOnInit() {
     if(!this.AuthService.getIsLoggedIn()){
@@ -30,7 +32,7 @@ export class AdminPageComponent implements OnInit {
   }
   generateLink(){
     if (localStorage.getItem('role')=='admin'){
-    this.AdminService.PostTask(this.url,this.assigned_to,this.bidValue)
+    this.AdminService.PostTask(this.url,this.assigned_to,this.bidValue,this.targetClicks,this.Slug)
     .subscribe(res=>{
       this.responseadminpost=res;
       if (res.status=='success'){
