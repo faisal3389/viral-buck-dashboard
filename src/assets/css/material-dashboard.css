@@ -1578,12 +1578,12 @@ output {
   line-height: 1.42857;
 }
 
-.form-control {
+/* .form-control {
   height: 36px;
   padding: 7px 0;
   font-size: 14px;
   line-height: 1.42857;
-}
+} */
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   input[type="date"].form-control,

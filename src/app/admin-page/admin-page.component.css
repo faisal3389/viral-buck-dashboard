@@ -1,13 +1,178 @@
-  .login-block h2 {
-    font-family: open sans;
-    font-size: 25px;
-    margin-top: 0;
-    font-weight: 400;
-    color: #44bda9;
-}
 #user{
-  color: white;
-  margin-left: 76%;
-  font-size: 22px;
-  cursor: pointer;
+    color: white;
+    margin-left: 76%;
+    font-size: 22px;
+    cursor: pointer;
 }
+a:hover{
+  text-decoration: none;
+  }
+  .fs-padding-left0{
+  padding-left: 0;
+  }
+  .fs-padding-right0{
+  padding-right: 0;
+  }
+  .fs-ContentBar{
+  width: 100%;
+  background-color: #003b49;
+  overflow-y: hidden;
+  }
+  .fs-Content {
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 100%;
+  }
+  .fs-wrap{
+  float: left;
+  min-height: 1px;
+  padding-left: 6px;
+  padding-right: 6px;
+  position: relative;
+  width: 100%;
+  }
+  .fs-c-wrap{
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 5px 0 rgba(104, 117, 131, 0.1);
+  display: table;
+  height: auto;
+  margin-bottom: 10px;
+  width: 40%;
+  margin-left: 29%;
+  position: relative;
+  top: -150px;
+  }
+  .fs-max-bar{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  }
+  .w {
+  display: table-cell;
+  }
+  .fs-i-card{
+  border-radius: 9px;
+  float: left; 
+  margin:0px auto 40px;
+  width: 100%;
+  }
+  .fs-i-card img{
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  }
+  /* fliks bar starts here */
+  .fs-close-btn {
+  color: #5a5a5a;
+  float: right;
+  font-size: 22px;
+  line-height: 23px;
+  padding-right: 20px;
+  float: right;
+  }
+  .btn-primary {
+  background-color: #003b49;
+  border-color: #003b49;
+  color: #fff;
+  }
+  .omb_login .omb_authTitle {
+  text-align: center;
+  line-height: 300%;
+  }
+  .omb_login .omb_socialButtons a {
+  color: white; 
+  opacity:0.9;
+  }
+  .omb_login .omb_socialButtons a:hover {
+  color: white;
+  opacity:1;      
+  }
+  .omb_login .btn-primary a:hover {
+      color: white;
+      opacity:1;      
+      }
+  .omb_login .omb_socialButtons .omb_btn-facebook {
+  background: #3b5998;
+  }
+  .omb_login .omb_socialButtons .omb_btn-twitter {
+  background: #00aced;
+  }
+  .omb_login .omb_socialButtons .omb_btn-google {
+  background: #c32f10;
+  }
+  .omb_login .omb_loginOr {
+  position: relative;
+  font-size: 1.5em;
+  color: #aaa;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  }
+  .omb_login .omb_loginOr .omb_hrOr {
+  background-color: #cdcdcd;
+  height: 1px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  }
+  .omb_login .omb_loginOr .omb_spanOr {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -0.5em;
+  margin-left: -1.5em;
+  background-color: white;
+  width: 3em;
+  text-align: center;
+  }     
+  .omb_login .omb_loginForm .input-group.i {
+  width: 2em;
+  }
+  .fs-margintop10{
+  margin-top: 10px;
+  }
+  .hello{
+  color: #687584;
+  font-size: 24px;
+  margin-bottom: 20px;
+  }
+  #form{
+      width:170%;
+      position: relative;
+      right: 63px;
+  }
+  #col-nw{
+      width: 100%;
+      margin-left: 0;
+  }
+  #new{
+      margin-left:8%;
+      margin-top: 2%;
+  }
+  @media (min-width: 768px) {
+
+  }
+  @media (min-width: 768px) {
+    .omb_login .omb_forgotPwd {
+    text-align: right;
+    margin-top:10px;
+    }   
+  }
+  @media only screen and (min-width: 768px) and (max-width:980px) {
+    .omb_login .omb_socialButtons a {
+    font-size: 11px;
+    padding: 10px 8px;
+    }
+  }
