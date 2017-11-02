@@ -1,5 +1,4 @@
-
-  <div class="container-fluid" style="background-color:#003b49;height: 637px;">
+  <!-- <div class="container-fluid" style="background-color:#003b49;height: 637px;">
       <div class="container">
   <img src="/assets/img/viral buck.png" width="250" height="70" />
     <i class="fa fa-user" id="user" aria-hidden="true" (click)="logout()"></i>
@@ -15,4 +14,37 @@
     <input  type="number" name="targetClicks"  class="form-control" required [(ngModel)]="targetClicks" #name="ngModel" placeholder="Target Clicks">
     <button style="background-color:#44bda9;border:0;font-size: 18px;font-family: open sans;line-height: 8px;" class="btn btn-lg btn-primary btn-block fs-margintop10" (click)="generateLink()" type="submit">Post</button>
 </div>
+</div> -->
+
+<div class="fs-ContentBar">
+        <div class="container">
+           <img src="/assets/img/viral buck.png" width="250" height="70" />
+            <i class="fa fa-user" id="user" aria-hidden="true" (click)="logout()"></i>
+            <div class="row fs-Content"> 
+                <div class="col-sm-12 col-md-12 col-lg-12">  
+                    <div class="fs-wrap">
+                        <div class="fs-c-wrap">
+                            <div class="fs-max-bar">
+                                <div class="fs-i-card"> 
+                                    <div> <img class="text-center" src="" width="50" height="50"></div>
+                                    <h3 class="hello omb_authTitle text-center">Create a Task </h3> 
+                                    <div class="row omb_row-sm-offset-3">
+                                      <div class="col-xs-12 col-sm-6 col-sm-offset-3" >  
+                                        <form class="omb_loginForm" (ngSubmit)="generateLink()" autocomplete="off" id="form"> 
+                                            <input type="text" class="form-control" required [(ngModel)]="url" name="url" #name="ngModel" placeholder="Url"><br>
+                                            <input type="password" class="form-control" required [(ngModel)]="Slug" name="Slug" #name="ngModel" placeholder="Slug"> <br>
+                                            <input type="text" class="form-control" required [(ngModel)]="assigned_to" name="assigned_to" #name="ngModel" placeholder="Assigned To"><br>
+                                            <input type="text" class="form-control" required [(ngModel)]="bidValue" name="bidValue" #name="ngModel" placeholder="Bid Value"><br>
+                                            <input type="text" class="form-control" required [(ngModel)]="targetClicks" name="targetClicks" #name="ngModel" placeholder="Target Clicks"><br>
+                                            <button class="btn btn-lg btn-primary btn-block fs-margintop10" type="submit">POST</button>
+                                        </form>
+                                      </div>
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
 </div>

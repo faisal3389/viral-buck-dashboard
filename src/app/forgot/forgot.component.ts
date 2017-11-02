@@ -18,11 +18,15 @@ export class ForgotComponent implements OnInit {
   email:any;
   forgot(){
     this.authenticationService.forgotPassword(this.email).subscribe(res =>{
-      if(res){
-      console.log("Email sent successfully")
-      alert("Please check your Email to Reset Password");
-                this.router.navigate(['/reset']);
-      }
+      if(res && res.status == 'failed'){
+        console.log("Email is missing")
+        alert(res.message);
+        }
+        else if(res && res.status == 'success'){
+          console.log("Email sent successfully")
+          alert("Please check your Email to Reset Password");
+          this.router.navigate(['/reset']);
+        }
     })
   }
 }
