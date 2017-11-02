@@ -62,15 +62,17 @@
                             <div class="card-content table-responsive">
                                 <table class="table">
                                     <thead class="text-primary">
+                                        <th>Slug</th>
                                       <th>Short URL</th>
                                       <th>Earned Clicks</th>
                                       <th>Bid Value(paisa)</th>
                                       <th>Earned Amount(Rs)</th>
-                                      <!-- <th>Target Clicks</th> -->
+                                      <th>Target Clicks</th>
                                       <!-- <th>Redeem</th> -->
                                     </thead>
                                     <tbody>
                                         <tr *ngFor="let response of resp">
+                                                        <td>{{response.Slug}}</td>
                                                         <td>
                                                             <a href="{{response.short_url}}">{{response.short_url}} </a>
                                                         </td>
@@ -78,7 +80,7 @@
                                                             <!-- <td class="socialShare" >{{response.short_url}}</td> -->
                                                             <td>{{response.bidValue}}</td>
                                                             <td>{{response.totalAmount}}</td>
-                                                            <!-- <td>{{response.clicks}}</td> -->
+                                                            <td>{{response.targetClicks}}</td>
                                                             
                                         </tr>
                                         
