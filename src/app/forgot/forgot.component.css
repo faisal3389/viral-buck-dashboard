@@ -37,7 +37,7 @@ a:hover{
     height: auto;
     margin-bottom: 10px;
     width: 40%;
-    margin-left: 29%;
+    margin-left: 30%;
     position: relative;
     top: -90px;
     }
@@ -170,3 +170,301 @@ a:hover{
       padding: 10px 8px;
       }
     }
+
+    @media screen and (width: 360px) {
+        .fs-c-wrap[_ngcontent-c1] {
+            width: 100%;
+            margin-left: 0;
+            top: 8px;
+        }
+        #form[_ngcontent-c1] {
+            width: 100%;
+        }
+        .form-control {
+            margin-left: 27.5%; 
+            width: 94%;
+        }
+        .fs-margintop10[_ngcontent-c1] {
+            margin-top: 31px;
+            width: 94%;
+            margin-left: 27.5%;
+            height: 35px;
+            line-height: 0;
+        }
+    }
+    @media screen and (width: 640px) {
+        
+         .fs-c-wrap[_ngcontent-c1] {
+            width: 65%;
+            margin-left: 100px;
+            margin-top: 28%;
+        }
+        #form[_ngcontent-c1] {
+            width: 100%;
+        }
+        .form-control {
+            margin-bottom: 7px;
+            width: 85%;
+            margin-left: 25.2%;
+       }
+       .fs-margintop10[_ngcontent-c1] {
+        margin-top: 28px;
+        width: 85%;
+        margin-left: 85px;
+        height: 35px;
+        line-height: 0;
+    }
+    }
+    @media screen and (width: 600px) {
+        
+        .fs-c-wrap[_ngcontent-c1] {
+           width: 65%;
+           margin-left: 90px;
+           margin-top: 30%;
+       }
+       #form[_ngcontent-c1] {
+           width: 100%;
+       }
+       .form-control {
+           margin-bottom: 7px;
+           width: 85%;
+           margin-left: 25.2%;
+      }
+      .fs-margintop10[_ngcontent-c1] {
+       margin-top: 28px;
+       width: 85%;
+       margin-left: 85px;
+       height: 35px;
+       line-height: 0;
+   }
+   }
+   @media screen and (width: 320px) {
+    .fs-c-wrap[_ngcontent-c1] {
+        width: 100%;
+        margin-left: 0;
+        top: 15px;
+    }
+    #form[_ngcontent-c1] {
+        width: 100%;
+    }
+    .form-control {
+        margin-left: 31.5%; 
+        width: 94%;
+    }
+    .fs-margintop10[_ngcontent-c1] {
+        margin-top: 31px;
+        width: 94%;
+        margin-left: 31.5%;
+        height: 35px;
+        line-height: 0;
+    }
+}
+@media screen and (width: 533px) {
+    .fs-c-wrap[_ngcontent-c1] {
+        width: 100%;
+        margin-left: 0;
+        top: 0px;
+    }
+    #form[_ngcontent-c1] {
+        width: 100%;
+    }
+    .form-control {
+        margin-left: 17.5%; 
+        width: 94%;
+    }
+    .fs-margintop10[_ngcontent-c1] {
+        margin-top: 31px;
+        width: 94%;
+        margin-left: 17.5%;
+        height: 35px;
+        line-height: 0;
+    }
+}
+@media screen and (width: 480px) {
+    .fs-c-wrap[_ngcontent-c1] {
+        width: 100%;
+        margin-left: 0;
+        top: 8px;
+    }
+    #form[_ngcontent-c1] {
+        width: 100%;
+    }
+    .form-control {
+        margin-left: 19.5%; 
+        width: 94%;
+    }
+    .fs-margintop10[_ngcontent-c1] {
+        margin-top: 31px;
+        width: 94%;
+        margin-left: 19.5%;
+        height: 35px;
+        line-height: 0;
+    }
+    #new[_ngcontent-c1] {
+        margin-left: 3%;
+    }
+}
+@media screen and (width: 854px) {
+   
+    .fs-c-wrap[_ngcontent-c1] {
+       width: 65%;
+       margin-left: 90px;
+       margin-top: 18%;
+   }
+   #form[_ngcontent-c1] {
+       width: 100%;
+   }
+   .form-control {
+       margin-bottom: 7px;
+       width: 185%;
+       margin-left: -10%;
+  }
+  .fs-margintop10[_ngcontent-c1] {
+   margin-top: 28px;
+   width: 185%;
+   margin-left: -16px;
+   height: 35px;
+   line-height: 0;
+}
+#new[_ngcontent-c1] {
+    margin-left: 5%;
+}
+}
+@media screen and (width: 768px) {
+  
+    .fs-c-wrap[_ngcontent-c1] {
+       width: 65%;
+       margin-left: 115px;
+       margin-top: 25%;
+   }
+   #form[_ngcontent-c1] {
+       width: 100%;
+   }
+   .form-control {
+       margin-bottom: 7px;
+       width: 185%;
+       margin-left: -10%;
+  }
+  .fs-margintop10[_ngcontent-c1] {
+   margin-top: 28px;
+   width: 185%;
+   margin-left: -16px;
+   height: 35px;
+   line-height: 0;
+}
+#new[_ngcontent-c1] {
+    margin-left: 5%;
+}
+}
+@media screen and (width: 412px) {
+    .fs-c-wrap[_ngcontent-c1] {
+        width: 100%;
+        margin-left: 0;
+        top: 8px;
+    }
+    #form[_ngcontent-c1] {
+        width: 100%;
+    }
+    .form-control {
+        margin-left: 23.5%; 
+        width: 94%;
+    }
+    .fs-margintop10[_ngcontent-c1] {
+        margin-top: 31px;
+        width: 94%;
+        margin-left: 23.5%;
+        height: 35px;
+        line-height: 0;
+    }
+}
+@media screen and (width: 375px) {
+    .fs-c-wrap[_ngcontent-c1] {
+        width: 100%;
+        margin-left: 0;
+        top: 8px;
+    }
+    #form[_ngcontent-c1] {
+        width: 100%;
+    }
+    .form-control {
+        margin-left: 25.5%; 
+        width: 94%;
+    }
+    .fs-margintop10[_ngcontent-c1] {
+        margin-top: 31px;
+        width: 94%;
+        margin-left: 25.5%;
+        height: 35px;
+        line-height: 0;
+    }
+}
+@media screen and (width: 667px) {
+    
+    .fs-c-wrap[_ngcontent-c1] {
+       width: 65%;
+       margin-left: 100px;
+       margin-top: 22%;
+   }
+   #form[_ngcontent-c1] {
+       width: 100%;
+   }
+   .form-control {
+       margin-bottom: 7px;
+       width: 85%;
+       margin-left: 25.2%;
+  }
+  .fs-margintop10[_ngcontent-c1] {
+   margin-top: 28px;
+   width: 85%;
+   margin-left: 85px;
+   height: 35px;
+   line-height: 0;
+}
+#new[_ngcontent-c1] {
+    margin-left: 0;
+}
+}
+@media screen and (width: 414px) {
+    .fs-c-wrap[_ngcontent-c1] {
+        width: 100%;
+        margin-left: 0;
+        top: 8px;
+    }
+    #form[_ngcontent-c1] {
+        width: 100%;
+    }
+    .form-control {
+        margin-left: 23.5%; 
+        width: 94%;
+    }
+    .fs-margintop10[_ngcontent-c1] {
+        margin-top: 31px;
+        width: 94%;
+        margin-left: 23.5%;
+        height: 35px;
+        line-height: 0;
+    }
+} 
+@media screen and (width: 736px) {
+   
+    .fs-c-wrap[_ngcontent-c1] {
+       width: 65%;
+       margin-left: 115px;
+       margin-top: 25%;
+   }
+   #form[_ngcontent-c1] {
+       width: 100%;
+   }
+   .form-control {
+       margin-bottom: 7px;
+       width: 185%;
+       margin-left: -10%;
+  }
+  .fs-margintop10[_ngcontent-c1] {
+   margin-top: 28px;
+   width: 185%;
+   margin-left: -16px;
+   height: 35px;
+   line-height: 0;
+}
+}
