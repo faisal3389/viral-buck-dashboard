@@ -41,31 +41,41 @@ export class SignupComponent implements OnInit {
         return false;
     } 
     return true;
-}
-ValidateEmail()  
-{  
-  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
-  return this.email.match(mailformat) ? true : false; 
-}
-signUp(){
-  if(!this._isFormValid()){
-    alert("Please fill required fields");
-    return;
-}
-else{
-  this.authenticationService.signUp(this.email,this.phone,this.password,this.confirmpassword,this.referral).subscribe(res =>{
-    console.log("response",res)
-    
-    if(this.ValidateEmail() && res.status=='success'){
-      console.log("signup  succesfull");
-      alert("user regisration successfull")
-      // this._notification.notify("User registration successful");
-      this.router.navigate(['/login']);
+  }
+  ValidateEmail(){  
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+    return this.email.match(mailformat) ? true : false; 
+  }
+  signUp(){
+    if(!this._isFormValid()){
+      alert("Please fill required fields");
+      return;
     }
-    else if (res.status=='failed'){
-      alert(res.message)
-    }
-  })
-} 
-}
+    else{
+      this.authenticationService.signUp(this.email,this.phone,this.password,this.confirmpassword,this.referral).subscribe(res =>{
+        // console.log("response",res);
+        if(this.ValidateEmail() && res.status=='success'){
+          console.log("signup  succesfull");
+        alert("user regisration successfull")
+          // this._notification.notify("User registration successful");
+          this.router.navigate(['/login']);
+        }
+        if(this.ValidateEmail()==false){
+        alert("Enter a valid Email Id");
+        }
+        if(this.ValidateEmail()==true && res && res.statusCode == "401"){
+        alert("User already registered");
+        }
+        else if(this.password!== this.confirmpassword){
+          alert("Password and conform were not same");
+       } 
+        else if(res.status !== "success"){
+          alert("Signup failed, Please try again");
+        }
+        else if(!res){
+          console.log("API Error");
+        }
+      })
+    } 
+  }
 }
