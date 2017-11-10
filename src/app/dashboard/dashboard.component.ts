@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
     this.dashboard()
   }
 
-
+  
   dashboard(){
   let email = localStorage.getItem('email');
   this.DashboardService.dashboard(email).subscribe(res =>{
@@ -43,5 +43,19 @@ export class DashboardComponent implements OnInit {
     console.log("logout successfully")
     this.AuthService.logout();
     this.router.navigate(['/login']);
+  }
+  redeems(totalclicks,totalAmount,targetClicks,short_url){
+    console.log("Inside Redeem function")
+    console.log(totalAmount,targetClicks,short_url)
+    if (totalclicks==targetClicks ){
+      let email = localStorage.getItem('email');
+      this.DashboardService.redeem(totalclicks,totalAmount,targetClicks,short_url,email).subscribe(res =>{
+        this.resp=res
+      })
+    }
+    else{
+
+    }
+
   }
 }

@@ -68,7 +68,7 @@
                                       <th>Bid Value(paisa)</th>
                                       <th>Earned Amount(Rs)</th>
                                       <th>Target Clicks</th>
-                                      <!-- <th>Redeem</th> -->
+                                      <th>Redeem</th>
                                     </thead>
                                     <tbody>
                                         <tr *ngFor="let response of resp">
@@ -81,6 +81,7 @@
                                                             <td>{{response.bidValue}}</td>
                                                             <td>{{response.totalAmount}}</td>
                                                             <td>{{response.targetClicks}}</td>
+                                                            <td><button (click)="redeems(response.clicks,response.totalAmount,response.targetClicks,response.short_url)" >Redeem</button></td>
                                                             
                                         </tr>
                                         

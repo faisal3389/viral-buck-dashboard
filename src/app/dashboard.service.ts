@@ -37,6 +37,16 @@ export class DashboardService {
     .map((res:Response) => res.json())
     .catch((error:any) => Observable.throw(error || 'Server error'))
 }
+
+redeem(totalclicks,totalAmount,targetClicks,short_url,email){
+    let url = this.BASE_URL+'redeem'
+    let dataString = "totalclicks="+totalclicks+"&"+"totalAmount="+totalAmount+"&"+"targetClicks="+targetClicks+"&"+"short_url="+short_url+"&"+"email="+email;
+    let options = this._getRequestOptionsWithBearer();
+    return this.http.post(url,dataString,options)
+.map((res:Response) => res.json())
+.catch((error:any) => Observable.throw(error || 'Server error'))
+
+}
 //   dashboard(email:any){
 //        let data = { 
 //         "email":email,
