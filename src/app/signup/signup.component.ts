@@ -47,7 +47,7 @@ export class SignupComponent implements OnInit {
   }
   signUp(){
     if(!this._isFormValid()){
-      alert("Please fill required fields");
+      alert("Please Fill Required Fields");
       return;
     }
     else{
@@ -66,7 +66,7 @@ export class SignupComponent implements OnInit {
         alert("User already registered");
         }
         else if(this.password!== this.confirmpassword){
-          alert("Password and conform were not same");
+          alert("Password and Confirm Password Should be Same");
        } 
         else if(res.status !== "success"){
           alert("Signup failed, Please try again");
