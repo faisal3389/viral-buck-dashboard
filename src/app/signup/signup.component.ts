@@ -24,7 +24,6 @@ export class SignupComponent implements OnInit {
   phone:any;
   password:any;
   confirmpassword: any;
-  referral:any;
  
 
   _isFormValid(){
@@ -52,7 +51,7 @@ export class SignupComponent implements OnInit {
       return;
     }
     else{
-      this.authenticationService.signUp(this.email,this.phone,this.password,this.confirmpassword,this.referral).subscribe(res =>{
+      this.authenticationService.signUp(this.email,this.phone,this.password,this.confirmpassword).subscribe(res =>{
         // console.log("response",res);
         if(this.ValidateEmail() && res.status=='success'){
           console.log("signup  succesfull");
