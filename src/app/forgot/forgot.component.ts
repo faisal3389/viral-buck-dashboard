@@ -19,7 +19,6 @@ export class ForgotComponent implements OnInit {
   forgot(){
     this.authenticationService.forgotPassword(this.email).subscribe(res =>{
       if(res && res.status == 'failed'){
-        console.log("Email is missing")
         alert(res.message);
         }
         else if(res && res.status == 'success'){
