@@ -15,15 +15,14 @@ export class AuthService {
         return Observable.throw(error.json().error||'Server error');
     }
    
-  signUp(email:any,phone:any,password:any,confirmpassword:any,referral:any){
+  signUp(email:any,phone:any,password:any,confirmpassword:any){
        let data = { 
         "email":email,
         "phone":phone,
         "password":password,
         "confirmpassword":confirmpassword,
-        "referral":referral
     }
-    let dataString = "email="+email+"&"+"phone="+phone+"&"+"password="+password+"&"+"confirmpassword="+confirmpassword+"&"+"referral="+referral;
+    let dataString = "email="+email+"&"+"phone="+phone+"&"+"password="+password+"&"+"confirmpassword="+confirmpassword;
     let url = this.BASE_URL+'signup';
     // let bodyString = JSON.stringify(body); 
     let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' }); 
