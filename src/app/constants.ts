@@ -1,2 +1,2 @@
 
-export const baseUrl : String="http://localhost:3000/";
+export const baseUrl : String="http://www.viralpaisa.com:3000/";
