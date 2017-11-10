@@ -35,7 +35,6 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("email",email);
         localStorage.setItem("token",token);
         this.router.navigate(['/dashboard']);
-        alert("login successfull");
       }
       else if(res.status=="success" && res.user.user.role=="admin"){
         this.authenticationService.setIsLoggedIn(true);
@@ -46,10 +45,9 @@ export class LoginComponent implements OnInit {
         let email = res.user.user.email
         localStorage.setItem("email",email);
         this.router.navigate(['/admin']);
-        alert("admin logged in successfully");
       }  
       else if(res.status=='failed' || res.status=='Unauthorized' || res.status == 'Unauthorised' ){
-        alert("Enter email and password");
+        alert(res.message);
       }  
     })
   }
