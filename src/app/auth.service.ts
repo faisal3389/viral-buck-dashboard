@@ -15,14 +15,17 @@ export class AuthService {
         return Observable.throw(error.json().error||'Server error');
     }
    
-  signUp(email:any,phone:any,password:any,confirmpassword:any){
+  signUp(email,phone,password,dob,firstName,lastName,){
        let data = { 
         "email":email,
         "phone":phone,
         "password":password,
-        "confirmpassword":confirmpassword,
+        "dob":dob,
+        "firstName":firstName,
+        "lastName":lastName
+
     }
-    let dataString = "email="+email+"&"+"phone="+phone+"&"+"password="+password+"&"+"confirmpassword="+confirmpassword;
+    let dataString = "email="+email+"&"+"phone="+phone+"&"+"password="+password+"&"+"data od birth="+dob+"&"+"first name="+firstName+"&"+"last name"+lastName;
     let url = this.BASE_URL+'signup';
     // let bodyString = JSON.stringify(body); 
     let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' }); 
@@ -38,7 +41,7 @@ export class AuthService {
             "password":password
         }
               let dataString = "username="+userName+"&"+"password="+password;
-        let url = this.BASE_URL+'signin';
+        let url = this.BASE_URL+'login';
         let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' }); 
         let options = new RequestOptions({ headers: headers });
         return this.http.post(url, dataString, options)
