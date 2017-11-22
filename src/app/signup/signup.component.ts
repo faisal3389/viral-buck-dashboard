@@ -24,23 +24,38 @@ export class SignupComponent implements OnInit {
   phone:any;
   password:any;
   confirmpassword: any;
+  firstName:any;
+  lastName:any;
+  dob:any;
  
-
+  
   _isFormValid(){
     if(!this.email || this.email == ""){
-        return false;
-    }
-    if(!this.phone || this.phone == ""){
-    		return false;
-    } 
-      	if(!this.password || this.password == ""){
-    		return false;
-    }
-    if(!this.confirmpassword || this.confirmpassword == ""){
-        return false;
-    } 
-    return true;
+      console.log("hai6")
+      return false;
   }
+  if(!this.phone || this.phone == ""){
+    console.log("hai")
+     return false;
+  } 
+  if(!this.password || this.password == ""){
+    console.log("hai1")
+    return false;
+  }
+  if(!this.confirmpassword || this.confirmpassword == ""){
+    console.log("hai2")
+      return false;
+  }
+  if(!this.firstName || this.firstName == ""){
+    console.log("hai3")
+    return false;
+  } 
+  if(!this.lastName || this.lastName == ""){
+    console.log("hai4")
+    return false;
+  } 
+   return true;
+}
   ValidateEmail(){  
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
     return this.email.match(mailformat) ? true : false; 
@@ -50,8 +65,7 @@ export class SignupComponent implements OnInit {
       alert("Please Fill Required Fields");
       return;
     }
-    else{
-      this.authenticationService.signUp(this.email,this.phone,this.password,this.confirmpassword).subscribe(res =>{
+      this.authenticationService.signUp(this.email,this.phone,this.password,this.dob,this.firstName,this.lastName).subscribe(res =>{
         // console.log("response",res);
         if(this.ValidateEmail() && res.status=='success'){
           console.log("signup  succesfull");
@@ -75,6 +89,6 @@ export class SignupComponent implements OnInit {
           console.log("API Error");
         }
       })
-    } 
+    
   }
 }
