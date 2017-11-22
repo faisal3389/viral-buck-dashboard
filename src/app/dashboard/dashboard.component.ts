@@ -44,6 +44,9 @@ export class DashboardComponent implements OnInit {
     this.AuthService.logout();
     this.router.navigate(['/login']);
   }
+  copy(){
+    
+  }
   redeems(totalclicks,totalAmount,targetClicks,short_url){
     console.log("Inside Redeem function")
     console.log(totalAmount,targetClicks,short_url)

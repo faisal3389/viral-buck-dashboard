@@ -1,4 +1,4 @@
-  <div class="wrapper">
+  <!-- <div class="wrapper">
     <div class="sidebar" data-color="#44bda9" data-image="" style="background-color: #003b49;">
     <div class="logo">
       
@@ -78,7 +78,7 @@
                                                         </td>
                                                             <td>{{response.clicks}}</td>
                                                             <!-- <td class="socialShare" >{{response.short_url}}</td> -->
-                                                            <td>{{response.bidValue}}</td>
+                                                            <!-- <td>{{response.bidValue}}</td>
                                                             <td>{{response.totalAmount}}</td>
                                                             <td>{{response.targetClicks}}</td>
                                                             <td><button (click)="redeems(response.clicks,response.totalAmount,response.targetClicks,response.short_url)" >Redeem</button></td>
@@ -94,8 +94,158 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="#"><img alt="logo" src="../assets/img/logo.png" width="200" height="50"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                 <li><a href="#">Sign up</a></li>
+                 <li><a href="#">Logout</a></li>
+              </ul>
+        </div>
+    </div>
+</nav>
 
-
-
+<div class="header navbar-fixed-top" style="z-index: 1;">
+        <div class="container">
+           <div class="row">
+              <div class="col-sm-6 col-xs-6">
+                 <div id="imaginary_container">
+                    <div class="input-group stylish-input-group">
+                       <input type="text" class="form-control"  placeholder="Search" >
+                       <span class="input-group-addon">
+                       <button type="submit">
+                       <span class="glyphicon glyphicon-search"></span>
+                       </button>  
+                       </span>
+                    </div>
+                 </div>
+              </div>
+              <div class="col-sm-6 col-xs-6">
+               <img src="../assets/img/sort by.png" />
+              </div>
+           </div>
+        </div>
+     </div>
+     
+     <div class="card">
+        <!--Card image-->
+        <div class="view overlay hm-white-slight">
+           <h2>Amazon Low Price</h2>
+           <img src="../assets/img/Amazon Screen.jpg" width="100%" height="200" class="img-fluid" alt="">
+           <a href="#">
+              <div class="mask"></div>
+           </a>
+        </div>
+        <!--Card content-->
+        <div class="card-body">
+           <!--Title-->
+           <h4 class="card-title"><i class="fa fa-facebook" aria-hidden="true" style="font-size: 25px;margin-left: 15px;"></i>
+              <i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 25px;margin-left: 8px;"></i>
+              <i class="fa fa-twitter" aria-hidden="true" style="font-size: 25px;margin-left: 8px;"></i>
+              <i class="fa fa-instagram" aria-hidden="true" style="font-size: 25px;margin-left: 8px;"></i>
+             <button class="fa fa-clone" aria-hidden="true" style="font-size: 25px;margin-right: 15px;float:right;"name="copy"></button>
+           </h4>
+           <!--Text-->
+           <hr>
+           
+           <table class="table text-center">
+         <tbody>
+           <tr>
+             <td>Clicks</td>
+             <td>Bit Values</td>
+             <td>Earned Amount</td>
+           </tr>
+           <tr>
+             <td>10</td>
+             <td>5P</td>
+             <td>105RP's</td>
+           </tr>
+         </tbody>
+       </table>
+        </div>
+     </div>
+           
+     <div class="card two">
+        <!--Card image-->
+        <div class="view overlay hm-white-slight">
+           <h2>Amazon Low Price</h2>
+          <img src="../assets/img/Amazon Screen.jpg" width="100%" height="200" class="img-fluid" alt="">
+           <a href="#">
+              <div class="mask"></div>
+           </a>
+        </div>
+        <!--Card content-->
+        <div class="card-body">
+           <!--Title-->
+           <h4 class="card-title"><i class="fa fa-facebook" aria-hidden="true" style="font-size: 25px;margin-left: 15px;"></i>
+              <i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 25px;margin-left: 8px;"></i>
+              <i class="fa fa-twitter" aria-hidden="true" style="font-size: 25px;margin-left: 8px;"></i>
+              <i class="fa fa-instagram" aria-hidden="true" style="font-size: 25px;margin-left: 8px;"></i>
+              <i class="fa fa-clone" aria-hidden="true" style="font-size: 25px;margin-right: 15px;float:right;" name="copy" [(ngModel)]="copy"></i>
+           </h4>
+           <!--Text-->
+           <hr>
+          <table class="table text-center">
+         <tbody>
+           <tr>
+             <td>Clicks</td>
+             <td>Bit Values</td>
+             <td>Earned Amount</td>
+           </tr>
+           <tr>
+             <td>10</td>
+             <td>5P</td>
+             <td>105RP's</td>
+           </tr>
+         </tbody>
+       </table>
+        </div>
+     </div>
+     
+     <div class="card two">
+        <!--Card image-->
+        <div class="view overlay hm-white-slight">
+           <h2>Amazon Low Price</h2>
+          <img src="../assets/img/Amazon Screen.jpg" width="100%" height="200" class="img-fluid" alt="">
+           <a href="#">
+              <div class="mask"></div>
+           </a>
+        </div>
+        <!--Card content-->
+        <div class="card-body">
+           <!--Title-->
+           <h4 class="card-title"><i class="fa fa-facebook" aria-hidden="true" style="font-size: 25px;margin-left: 15px;"></i>
+              <i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 25px;margin-left: 8px;"></i>
+              <i class="fa fa-twitter" aria-hidden="true" style="font-size: 25px;margin-left: 8px;"></i>
+              <i class="fa fa-instagram" aria-hidden="true" style="font-size: 25px;margin-left: 8px;"></i>
+              <i class="fa fa-clone" aria-hidden="true" style="font-size: 25px;margin-right: 15px;float:right;"></i>
+           </h4>
+           <!--Text-->
+           <hr>
+           <table class="table text-center">
+         <tbody>
+           <tr>
+             <td>Clicks</td>
+             <td>Bit Values</td>
+             <td>Earned Amount</td>
+           </tr>
+           <tr>
+             <td>10</td>
+             <td>5P</td>
+             <td>105RP's</td>
+           </tr>
+         </tbody>
+       </table>
+        </div>
+     </div>
+     
