@@ -8,9 +8,10 @@ a:hover{
     padding-right: 0;
     }
     .fs-ContentBar{
+        height: 100%;
     width: 100%;
     background-color: #003b49;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     }
     .fs-Content {
     float: left;
