@@ -25,12 +25,12 @@ export class LoginComponent implements OnInit {
   password:any;
   login(){
     this.authenticationService.login(this.email,this.password).subscribe(res =>{
-      if(res.status=="success" && res.user.user.role=="user"){
+      if(res.status=="success" && res.user.role=="user"){
         this.authenticationService.setIsLoggedIn(true);
         console.log("login  succesfull");
         let token = res.token;
-        let email = res.user.user.email
-        let role = res.user.user.role
+        let email = res.user.email
+        let role = res.user.role
         localStorage.setItem("role",role)
         localStorage.setItem("email",email);
         localStorage.setItem("token",token);
