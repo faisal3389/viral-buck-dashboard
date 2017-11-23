@@ -15,17 +15,13 @@ export class AuthService {
         return Observable.throw(error.json().error||'Server error');
     }
    
-  signUp(email,phone,password,dob,firstName,lastName,){
+  signUp(email,phoneNumber,password){
        let data = { 
         "email":email,
-        "phone":phone,
-        "password":password,
-        "dob":dob,
-        "firstName":firstName,
-        "lastName":lastName
-
+        "phoneNumber":phoneNumber,
+        "password":password
     }
-    let dataString = "email="+email+"&"+"phone="+phone+"&"+"password="+password+"&"+"data od birth="+dob+"&"+"first name="+firstName+"&"+"last name"+lastName;
+    let dataString = "email="+email+"&"+"phoneNumber="+phoneNumber+"&"+"password="+password;
     let url = this.BASE_URL+'signup';
     // let bodyString = JSON.stringify(body); 
     let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' }); 
