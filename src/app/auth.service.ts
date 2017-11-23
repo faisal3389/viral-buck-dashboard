@@ -15,13 +15,14 @@ export class AuthService {
         return Observable.throw(error.json().error||'Server error');
     }
    
-  signUp(email,phoneNumber,password){
+  signUp(email,phoneNumber,password,confirmPassword){
        let data = { 
         "email":email,
         "phoneNumber":phoneNumber,
-        "password":password
+        "password":password,
+        "confirmpassword":confirmPassword
     }
-    let dataString = "email="+email+"&"+"phoneNumber="+phoneNumber+"&"+"password="+password;
+    let dataString = "email="+email+"&"+"phoneNumber="+phoneNumber+"&"+"password="+password+"&"+"confirmPassword="+confirmPassword;
     let url = this.BASE_URL+'signup';
     // let bodyString = JSON.stringify(body); 
     let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' }); 
@@ -75,11 +76,11 @@ export class AuthService {
         localStorage.setItem("isLoggedIn",bool);    
       }
     logout(){
-        console.log("Inside auth service")
         localStorage.removeItem("token",);
         localStorage.removeItem("email",);
         localStorage.removeItem("role",);
-            this.setIsLoggedIn(false);
+        this.setIsLoggedIn(false);
+        console.log("logged out successfully")
     }
     getIsLoggedIn(){
         return localStorage.getItem("isLoggedIn") === "true"? true:false;
