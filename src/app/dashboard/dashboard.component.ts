@@ -11,7 +11,7 @@ import {ClipboardService} from '../clipboard.service'
   providers: [DashboardService,AuthService]
 })
 export class DashboardComponent implements OnInit {
-  someText="hai giri333333333333333333";
+  
   resp:any;
   constructor(
     private DashboardService : DashboardService,
@@ -21,11 +21,11 @@ export class DashboardComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // if(!this.AuthService.getIsLoggedIn()){
-    //   this.router.navigate(['/login']);
-    //   return;
-    // }
-    // this.dashboard()
+    if(!this.AuthService.getIsLoggedIn()){
+      this.router.navigate(['/login']);
+      return;
+    }
+    this.dashboard()
   }
 
   
@@ -47,10 +47,10 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
-  copyToClipboard() {
+  copyToClipboard(urlLink) {
     //  this.clipboard.copy("this.someText");
     console.log('Inside copy function');
-     this.clipboard.copy(this.someText);
+     this.clipboard.copy(urlLink);
   }
   redeems(totalclicks,totalAmount,targetClicks,short_url){
     console.log("Inside Redeem function")
