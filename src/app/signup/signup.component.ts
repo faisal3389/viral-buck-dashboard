@@ -21,12 +21,10 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
   }
   email:any;
-  phone:any;
+  phoneNumber:any;
   password:any;
   confirmpassword: any;
-  firstName:any;
-  lastName:any;
-  dob:any;
+ 
  
   
   _isFormValid(){
@@ -34,7 +32,7 @@ export class SignupComponent implements OnInit {
       console.log("hai6")
       return false;
   }
-  if(!this.phone || this.phone == ""){
+  if(!this.phoneNumber || this.phoneNumber == ""){
     console.log("hai")
      return false;
   } 
@@ -46,14 +44,7 @@ export class SignupComponent implements OnInit {
     console.log("hai2")
       return false;
   }
-  if(!this.firstName || this.firstName == ""){
-    console.log("hai3")
-    return false;
-  } 
-  if(!this.lastName || this.lastName == ""){
-    console.log("hai4")
-    return false;
-  } 
+  
    return true;
 }
   ValidateEmail(){  
@@ -65,8 +56,8 @@ export class SignupComponent implements OnInit {
       alert("Please Fill Required Fields");
       return;
     }
-      this.authenticationService.signUp(this.email,this.phone,this.password,this.dob,this.firstName,this.lastName).subscribe(res =>{
-        // console.log("response",res);
+      this.authenticationService.signUp(this.email,this.phoneNumber,this.password).subscribe(res =>{
+        console.log("response",res);
         if(this.ValidateEmail() && res.status=='success'){
           console.log("signup  succesfull");
         alert("user regisration successfull")
