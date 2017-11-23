@@ -15,7 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { ResetComponent } from './reset/reset.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import {ClipboardService} from './clipboard.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +34,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ClipboardModule
     
   ],
-  providers: [AdminService,AuthService],
+  providers: [AdminService,AuthService,ClipboardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
