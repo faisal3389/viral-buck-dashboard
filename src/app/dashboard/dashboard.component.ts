@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {DashboardService} from '../dashboard.service'
 import { ActivatedRoute,Router } from '@angular/router';
 import {AuthService} from '../auth.service'
-
+ import { ClipboardModule } from 'ng2-clipboard';
+import {ClipboardService} from '../clipboard.service'
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -10,20 +11,21 @@ import {AuthService} from '../auth.service'
   providers: [DashboardService,AuthService]
 })
 export class DashboardComponent implements OnInit {
-
+  someText="hai giri333333333333333333";
   resp:any;
   constructor(
     private DashboardService : DashboardService,
     private router : Router,
     private AuthService : AuthService,
+   private clipboard:ClipboardService
   ) { }
 
   ngOnInit() {
-    if(!this.AuthService.getIsLoggedIn()){
-      this.router.navigate(['/login']);
-      return;
-    }
-    this.dashboard()
+    // if(!this.AuthService.getIsLoggedIn()){
+    //   this.router.navigate(['/login']);
+    //   return;
+    // }
+    // this.dashboard()
   }
 
   
@@ -44,8 +46,11 @@ export class DashboardComponent implements OnInit {
     this.AuthService.logout();
     this.router.navigate(['/login']);
   }
-  copy(){
-    
+
+  copyToClipboard() {
+    //  this.clipboard.copy("this.someText");
+    console.log('Inside copy function');
+     this.clipboard.copy(this.someText);
   }
   redeems(totalclicks,totalAmount,targetClicks,short_url){
     console.log("Inside Redeem function")
