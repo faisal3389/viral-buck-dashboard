@@ -23,25 +23,23 @@ export class SignupComponent implements OnInit {
   email:any;
   phoneNumber:any;
   password:any;
-  confirmpassword: any;
+  confirmPassword: any;
  
  
   
   _isFormValid(){
     if(!this.email || this.email == ""){
-      console.log("hai6")
       return false;
   }
   if(!this.phoneNumber || this.phoneNumber == ""){
-    console.log("hai")
      return false;
   } 
   if(!this.password || this.password == ""){
-    console.log("hai1")
+   
     return false;
   }
-  if(!this.confirmpassword || this.confirmpassword == ""){
-    console.log("hai2")
+  if(!this.confirmPassword || this.confirmPassword == ""){
+    
       return false;
   }
   
@@ -56,7 +54,7 @@ export class SignupComponent implements OnInit {
       alert("Please Fill Required Fields");
       return;
     }
-      this.authenticationService.signUp(this.email,this.phoneNumber,this.password).subscribe(res =>{
+      this.authenticationService.signUp(this.email,this.phoneNumber,this.password,this.confirmPassword).subscribe(res =>{
         console.log("response",res);
         if(this.ValidateEmail() && res.status=='success'){
           console.log("signup  succesfull");
@@ -70,7 +68,7 @@ export class SignupComponent implements OnInit {
         if(this.ValidateEmail()==true && res && res.statusCode == "401"){
         alert("User already registered");
         }
-        else if(this.password!== this.confirmpassword){
+        else if(this.password!== this.confirmPassword){
           alert("Password and Confirm Password Should be Same");
        } 
         else if(res.status !== "success"){
