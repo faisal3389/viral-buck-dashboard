@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {DashboardService} from '../dashboard.service'
 import { ActivatedRoute,Router } from '@angular/router';
 import {AuthService} from '../auth.service'
- import { ClipboardModule } from 'ng2-clipboard';
-import {ClipboardService} from '../clipboard.service'
+import { ClipboardModule } from 'ng2-clipboard';
+import {ClipboardService} from '../clipboard.service';
+import { ElementRef } from '@angular/core';
+import { ViewChild } from '@angular/core';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -13,13 +15,17 @@ import {ClipboardService} from '../clipboard.service'
 export class DashboardComponent implements OnInit {
   
   resp:any;
+  elRef: any;
   constructor(
     private DashboardService : DashboardService,
     private router : Router,
     private AuthService : AuthService,
-   private clipboard:ClipboardService
+   private clipboard:ClipboardService,
+   private elementRef: ElementRef
   ) { }
 
+  @ViewChild('socalshare') el:ElementRef;
+  
   ngOnInit() {
     if(!this.AuthService.getIsLoggedIn()){
       this.router.navigate(['/login']);
@@ -28,17 +34,29 @@ export class DashboardComponent implements OnInit {
     this.dashboard()
   }
 
+  ngAfterViewInit() {
+    var giri = this.el.nativeElement.querySelector('.socialShare');
+    var url = 'www.amazon.com';
+    var options = {
+      twitter: {
+        text: 'checkout our amazon gyan, lol ',
+        via: 'Tutorialzine'
+      },
+    
+     facebook : true,
+      googlePlus : true
+    };
+    giri.shareButtons(url, options);
+  }
   
   dashboard(){
-  let email = localStorage.getItem('email');
-  this.DashboardService.dashboard(email).subscribe(res =>{
-    for (var i=0;i<res.length;i++){
-    res[i].totalAmount = (res[i].bidValue*res[i].clicks)/100
-    console.log(res)
-    }
-    console.log(res)
-  this.resp=res
-  })
+    let email = localStorage.getItem('email');
+    this.DashboardService.dashboard(email).subscribe(res =>{
+      for (var i=0;i<res.length;i++){
+       res[i].totalAmount = (res[i].bidValue*res[i].clicks)/100;
+      }
+      this.resp=res
+    })
   }
 
   logout(){
@@ -48,22 +66,7 @@ export class DashboardComponent implements OnInit {
   }
 
   copyToClipboard(urlLink) {
-    //  this.clipboard.copy("this.someText");
-    console.log('Inside copy function');
      this.clipboard.copy(urlLink);
   }
-  redeems(totalclicks,totalAmount,targetClicks,short_url){
-    console.log("Inside Redeem function")
-    console.log(totalAmount,targetClicks,short_url)
-    if (totalclicks==targetClicks ){
-      let email = localStorage.getItem('email');
-      this.DashboardService.redeem(totalclicks,totalAmount,targetClicks,short_url,email).subscribe(res =>{
-        this.resp=res
-      })
-    }
-    else{
 
-    }
-
-  }
 }
