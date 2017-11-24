@@ -1,7 +1,7 @@
 $(function (){
 
-	var url = 'www.sellergyan.com';
-
+	// var url = 'www.sellergyan.com';
+  var url = document.getElementById('shareUrl').innerHTML;
 	var options = {
 
 		twitter: {

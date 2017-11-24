@@ -34,21 +34,6 @@ export class DashboardComponent implements OnInit {
     this.dashboard()
   }
 
-  ngAfterViewInit() {
-    var giri = this.el.nativeElement.querySelector('.socialShare');
-    var url = 'www.amazon.com';
-    var options = {
-      twitter: {
-        text: 'checkout our amazon gyan, lol ',
-        via: 'Tutorialzine'
-      },
-    
-     facebook : true,
-      googlePlus : true
-    };
-    giri.shareButtons(url, options);
-  }
-  
   dashboard(){
     let email = localStorage.getItem('email');
     this.DashboardService.dashboard(email).subscribe(res =>{
