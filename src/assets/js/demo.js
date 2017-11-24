@@ -1,11 +1,11 @@
 $(function (){
 
-	var url = 'http://tutorialzine.com/2014/08/cool-share-jquery-plugin/';
+	var url = 'www.sellergyan.com';
 
 	var options = {
 
 		twitter: {
-			text: 'Check out this awesome jQuery Social Buttons Plugin! ',
+			text: 'checkout our seller gyan, lol ',
 			via: 'Tutorialzine'
 		},
 
